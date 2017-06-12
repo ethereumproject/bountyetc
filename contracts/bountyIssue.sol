@@ -1,6 +1,6 @@
 pragma solidity ^0.4.11;
 
-contract bountyIssue {
+contract BountyIssue {
     struct Donation {
         uint amount;
         uint timestamp;
