@@ -21,9 +21,17 @@ contract BountyIssue {
         issueUrl = url;
     }
 
+    function getIssueUrl() returns(string) {
+        return issueUrl;
+    }
+
     function donate() payable {
         donations[msg.sender].amount += msg.value;
         donations[msg.sender].timestamp = block.timestamp;
+    }
+
+    function getMyDonations() returns(uint) {
+        return donations[msg.sender].amount;
     }
 
     function claim() {
